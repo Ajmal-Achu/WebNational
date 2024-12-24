@@ -3,7 +3,7 @@ import Spline from '@splinetool/react-spline';
 const Hero = () => {
   return (
     <Spline
-        scene="https://prod.spline.design/dbJJOL6wsAQd4OYx/scene.splinecode" 
+        scene="https://prod.spline.design/4Wp4shAuXKM2Nv8z/scene.splinecode" 
       />
   );
 };
