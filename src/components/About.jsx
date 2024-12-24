@@ -77,6 +77,11 @@ const About = () => {
         className="mt-6 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         <p>Authors can submit papers through Microsoft CMT.</p>
+                <button
+          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+        >
+          Login
+        </button>
       </motion.div>
 
       <div className="mt-20 flex flex-wrap gap-10">
