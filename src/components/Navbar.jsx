@@ -50,7 +50,7 @@ const Navbar = () => {
           >
             <a
               href={publicUrls.resume}
-              download="Brouchere.pdf"
+              download="Brochure.pdf"
               target="_blank"
             >
               Download Brochure
@@ -92,10 +92,10 @@ const Navbar = () => {
               >
                 <a
                   href={publicUrls.resume}
-                  download="Shridhar_Rai_Resume.pdf"
+                  download="Brochure.pdf"
                   target="_blank"
                 >
-                  Resume
+                  Download Brochure
                 </a>
               </li>
             </ul>
