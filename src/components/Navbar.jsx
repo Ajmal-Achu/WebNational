@@ -53,7 +53,7 @@ const Navbar = () => {
               download="Brouchere.pdf"
               target="_blank"
             >
-              Download Brouchere
+              Download Brochure
             </a>
           </li>
         </ul>
