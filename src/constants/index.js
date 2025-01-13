@@ -92,6 +92,20 @@ const experiences = [
       "Smart Energy System",
     ],
   },
+    {
+    title: "Computational Intelligence",
+    icon: skillrisers,
+    iconBg: "#E6DEDD",
+    date: "Track III",
+    points: [
+      "AI",
+      "Machine Learning",
+      "Computer Vision",
+      "Data Science",
+      "Fuzzy Logic",
+      "Evolutionary Computation",
+    ],
+  },
   {
     title: "Cyber Security & Forensics",
     icon: newgen,
@@ -104,20 +118,6 @@ const experiences = [
       "Block Chain",
       "VAPT",
       "Cloud Security",
-    ],
-  },
-  {
-    title: "Computational Intelligence",
-    icon: skillrisers,
-    iconBg: "#E6DEDD",
-    date: "Track III",
-    points: [
-      "AI",
-      "Machine Learning",
-      "Computer Vision",
-      "Data Science",
-      "Fuzzy Logic",
-      "Evolutionary Computation",
     ],
   },
 ];
