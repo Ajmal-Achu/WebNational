@@ -36,7 +36,9 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>About Us</h2>
+        <h2 className="text-4xl font-bold text-white mb-8">
+            About Us
+          </h2>
       </motion.div>
 
       <motion.p
@@ -47,7 +49,9 @@ const About = () => {
       </motion.p>
 
       <motion.div variants={textVariant()}>
-        <h2 className={styles.sectionHeadText}>Call For Papers</h2>
+        <h2 className="text-4xl font-bold text-white mb-8">
+            Call For Papers
+          </h2>
       </motion.div>
 
       <motion.p
@@ -58,7 +62,9 @@ const About = () => {
       </motion.p>
 
       <motion.div variants={textVariant()} className="mt-10">
-        <h2 className={styles.sectionHeadText}>Important Dates</h2>
+        <h2 className="text-4xl font-bold text-white mb-8">
+            Important Dates
+          </h2>
       </motion.div>
 
       <motion.ul
