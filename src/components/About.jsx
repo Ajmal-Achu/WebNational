@@ -5,6 +5,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { personalInfo, navigationPaths, services } from "../constants";
 import { Tilt } from "react-tilt";
 import { SectionWrapper } from "../hoc";
+import Link from "next/link";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -37,8 +38,8 @@ const About = () => {
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className="text-4xl font-bold text-white mb-8">
-            About Us
-          </h2>
+          About Us
+        </h2>
       </motion.div>
 
       <motion.p
@@ -50,8 +51,8 @@ const About = () => {
 
       <motion.div variants={textVariant()}>
         <h2 className="text-4xl font-bold text-white mb-8">
-            Call For Papers
-          </h2>
+          Call For Papers
+        </h2>
       </motion.div>
 
       <motion.p
@@ -63,8 +64,8 @@ const About = () => {
 
       <motion.div variants={textVariant()} className="mt-10">
         <h2 className="text-4xl font-bold text-white mb-8">
-            Important Dates
-          </h2>
+          Important Dates
+        </h2>
       </motion.div>
 
       <motion.ul
@@ -83,11 +84,15 @@ const About = () => {
         className="mt-6 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         <p>Authors can submit papers through Microsoft CMT.</p>
-                <button
-          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
-        >
-          Login
-        </button>
+        <Link href="https://cmt3.research.microsoft.com/NCICPS2025" target="_blank" rel="noopener noreferrer">
+          <motion.button
+            className="mt-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-2 px-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Login
+          </motion.button>
+        </Link>
       </motion.div>
 
       <div className="mt-20 flex flex-wrap gap-10">
