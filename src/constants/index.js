@@ -46,7 +46,7 @@ export const navLinks = [
     title: "Call For Papers",
   },
   {
-    id: navigationPaths.work,
+    id: navigationPaths.conferencetracks,
     title: " Conference Tracks",
   },
   {
