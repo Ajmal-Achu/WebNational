@@ -21,7 +21,7 @@ class Contact extends React.Component {
     ];
 
     return (
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8" id ="contact">
         <div className="max-w-7xl mx-auto">
           <div className="mb-2 text-[#40E0D0] uppercase tracking-wider">
             Get in Touch
