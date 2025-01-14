@@ -10,6 +10,8 @@ export const Hero = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
+  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"]; // Added this line
+  const period = 2000; // Added this line
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -47,20 +49,20 @@ export const Hero = () => {
   return (
     <section className="banner" id="hero">
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">NCICPS 25</span>
-                  <h1>2nd National Conference <br>
-Feb 27 - March 1</h1>
-                  <p>Organized By College Of Engineering Kallooppara <br> 
-Kadamankulam P.O <br>
-Thiruvalla <br>
-Pathanamthitta District <br> 
-Kerala - 689583</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <h1>2nd National Conference <br />
+                Feb 27 - March 1</h1>
+                <p>Organized By College Of Engineering Kallooppara <br /> 
+                Kadamankulam P.O <br />
+                Thiruvalla <br />
+                Pathanamthitta District <br /> 
+                Kerala - 689583</p>
+                <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
@@ -77,3 +79,4 @@ Kerala - 689583</p>
     </section>
   )
 }
+
