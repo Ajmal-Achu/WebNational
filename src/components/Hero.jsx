@@ -10,8 +10,6 @@ export const Hero = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["College Of Engineering", "Kallooppara", "Kadamankulam P.O", "Tiruvalla", "Pathanamthitta District", "Kerala State- 689583"];
-  const period = 2000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -55,8 +53,13 @@ export const Hero = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">NCICPS 25</span>
-                <h1>{`Organized By`} <span className="txt-rotate" dataPeriod="1000" data-rotate='["College Of Engineering", "Kallooppara", "Kadamankulam P.O", "Tiruvalla", "Pathanamthitta District", "Kerala State- 689583"]'><span className="wrap">{text}</span></span></h1>
-                  <p>2 National Conference on INTELLIGENT CYBER PHYSICAL SYSTEMS Organized By COLLEGE OF ENGINEERING KALLOOPPARA Feb 27 - March 1</p>
+                  <h1>2nd National Conference <br>
+Feb 27 - March 1</h1>
+                  <p>Organized By College Of Engineering Kallooppara <br> 
+Kadamankulam P.O <br>
+Thiruvalla <br>
+Pathanamthitta District <br> 
+Kerala - 689583</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
