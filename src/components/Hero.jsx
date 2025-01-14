@@ -55,8 +55,8 @@ export const Hero = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">NCICPS 25</span>
-                <h1>2nd National Conference <br />
-                Feb 27 - March 1</h1>
+                <h1>2nd National Conference On Intelligent Cyber Physical Systems<br />
+                Feb 27 - March 1 2025</h1>
                 <p>Organized By College Of Engineering Kallooppara <br /> 
                 Kadamankulam P.O <br />
                 Thiruvalla <br />
