@@ -96,7 +96,7 @@ const experiences = [
     title: "Computational Intelligence",
     icon: skillrisers,
     iconBg: "#E6DEDD",
-    date: "Track III",
+    date: "Track II",
     points: [
       "AI",
       "Machine Learning",
@@ -110,7 +110,7 @@ const experiences = [
     title: "Cyber Security & Forensics",
     icon: newgen,
     iconBg: "#E6DEDD",
-    date: "Track II",
+    date: "Track III",
     points: [
       "Cyber Security",
       "Cyber Forensics",
