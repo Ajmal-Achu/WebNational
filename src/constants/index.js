@@ -37,6 +37,7 @@ const navigationPaths = {
   about: "about",
   venue: "venue",
   contact: "contact",
+  conferencetracks: "conferencetracks",
 };
 
 
