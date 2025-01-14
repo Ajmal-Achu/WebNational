@@ -5,7 +5,6 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { personalInfo, navigationPaths, services } from "../constants";
 import { Tilt } from "react-tilt";
 import { SectionWrapper } from "../hoc";
-import Link from "next/link";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -20,7 +19,7 @@ const ServiceCard = ({ index, title, icon }) => {
         <div className="bg-tertiary rounded-[20px] min-h-[280px] py-5 px-12 flex flex-col justify-evenly items-center">
           <img
             src={icon}
-            alt="web-developemnt"
+            alt="web-development"
             className="w-16 h-16 object-contain"
           />
           <h3 className="text-white text-[20px] font-bold text-center">
@@ -33,6 +32,10 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
+  const handleLogin = () => {
+    window.open("https://cmt3.research.microsoft.com/NCICPS2025", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -72,7 +75,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] list-disc list-inside"
       >
-        <li>Paper Submission Deadline: 15/01/2025</li>
+        <li>Paper Submission Deadline: 21/01/2025</li>
         <li>Notification of acceptance: 10/02/2025</li>
         <li>Camera-Ready paper submission: 15/02/2025</li>
         <li>Registration for conference: 15/02/2025</li>
@@ -84,15 +87,14 @@ const About = () => {
         className="mt-6 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         <p>Authors can submit papers through Microsoft CMT.</p>
-        <Link href="https://cmt3.research.microsoft.com/NCICPS2025" target="_blank" rel="noopener noreferrer">
-          <motion.button
-            className="mt-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-2 px-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Login
-          </motion.button>
-        </Link>
+        <motion.button
+          className="mt-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-2 px-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={handleLogin}
+        >
+          Login
+        </motion.button>
       </motion.div>
 
       <div className="mt-20 flex flex-wrap gap-10">
