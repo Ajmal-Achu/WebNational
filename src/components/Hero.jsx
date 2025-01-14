@@ -55,8 +55,8 @@ export const Hero = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">NCICPS 25</span>
-                <h1>{`Organized By`} <span className="txt-rotate" dataPeriod="1000" data-rotate='["College Of Engineering", "Kallooppara", "Kadamankulam P.O", "Tiruvall", "Pathanamthitta District", "Kerala State- 689583"]'><span className="wrap">{text}</span></span></h1>
-                  <p>2 National Conference on INTELLIGENT CYBER PHYSICAL SYSTEMS Organized By COLLEGE OF ENGINEERING KALLOOPPARA<br>Feb 27 - March 1</p>
+                <h1>{`Organized By`} <span className="txt-rotate" dataPeriod="1000" data-rotate='["College Of Engineering", "Kallooppara", "Kadamankulam P.O", "Tiruvalla", "Pathanamthitta District", "Kerala State- 689583"]'><span className="wrap">{text}</span></span></h1>
+                  <p>2 National Conference on INTELLIGENT CYBER PHYSICAL SYSTEMS Organized By COLLEGE OF ENGINEERING KALLOOPPARA Feb 27 - March 1</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
