@@ -10,7 +10,7 @@ export const Hero = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = ["College Of Engineering", "Kallooppara", "Kadamankulam P.O", "Tiruvalla", "Pathanamthitta District", "Kerala State- 689583"];
   const period = 2000;
 
   useEffect(() => {
