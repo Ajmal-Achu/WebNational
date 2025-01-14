@@ -82,4 +82,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, navigationPaths.work);
+export default SectionWrapper(Experience, navigationPaths.conferencetracks);
