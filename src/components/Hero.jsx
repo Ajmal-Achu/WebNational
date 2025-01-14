@@ -1,10 +1,6 @@
-import React, { useState, useEffect, Suspense } from 'react';
-import dynamic from 'next/dynamic';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 
-const DynamicSpline = dynamic(() => import('@splinetool/react-spline'), {
-  ssr: false,
-  loading: () => <LoadingFallback />
-});
+const LazySpline = lazy(() => import('@splinetool/react-spline'));
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,12 +20,14 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-gray-900">
-      <div className={`w-full h-full ${isMobile ? 'scale-[0.7] origin-center' : ''}`}>
-        <DynamicSpline
-          scene="https://prod.spline.design/4Wp4shAuXKM2Nv8z/scene.splinecode"
-          className="w-full h-full"
-        />
-      </div>
+      <Suspense fallback={<LoadingFallback />}>
+        <div className={`w-full h-full ${isMobile ? 'scale-[0.7] origin-center' : ''}`}>
+          <LazySpline
+            scene="https://prod.spline.design/4Wp4shAuXKM2Nv8z/scene.splinecode"
+            className="w-full h-full"
+          />
+        </div>
+      </Suspense>
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
         <div className="text-center text-white p-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Our 3D World</h1>
