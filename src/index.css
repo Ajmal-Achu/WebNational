@@ -13,6 +13,11 @@
   color-scheme: dark;
 }
 
+
+@media (max-width: 768px) {
+  .spline-container {
+    transform: scale(0.7);
+  }
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
