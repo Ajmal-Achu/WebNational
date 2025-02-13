@@ -3,107 +3,230 @@ import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import { close, logoWeb, menu } from "../assets";
 import {
-  navLinks,
-  navigationPaths,
-  personalInfo,
-  publicUrls,
+  navLinks,
+  navigationPaths,
+  personalInfo,
+  publicUrls,
 } from "../constants";
 
+const registrationLinks = [
+  {
+    id: "paper-presentation-registration",
+    title: "Paper Presentation Registration",
+    googleFormUrl: "https://forms.gle/RBfPBWcpbdUeBiyg7", // Replace with your actual Google Form URL
+  },
+  {
+    id: "conclave-registration",
+    title: "Conclave Registration",
+    googleFormUrl: "YOUR_CONCLAVE_GOOGLE_FORM_URL", // Replace with your actual Google Form URL
+  },
+  {
+    id: "workshop-registration",
+    title: "Workshop Registration",
+    googleFormUrl: "https://forms.gle/1UhpazS9LRuJPcPr7", // Replace with your actual Google Form URL
+  },
+  {
+    id: "poster-presentation-registration",
+    title: "Poster Presentation Registration",
+    googleFormUrl: "YOUR_POSTER_PRESENTATION_GOOGLE_FORM_URL", // Replace with your actual Google Form URL
+  },
+];
+
 const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
+  const [isRegistrationDropdownOpen, setIsRegistrationDropdownOpen] = useState(false);
+  const [isMobileRegistrationDropdownOpen, setIsMobileRegistrationDropdownOpen] = useState(false);
 
-  return (
-    <nav
-      className={`${styles.paddingX} py-5 w-full flex items-center fixed top-0 z-20 bg-primary`}
-    >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to={navigationPaths.home}
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={logoWeb} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            {personalInfo.name} &nbsp;
-          </p>
-        </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              } text-[18px] font-medium cursor-pointer hover:text-white`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
+  const handleRegistrationClick = () => {
+    setIsRegistrationDropdownOpen(!isRegistrationDropdownOpen);
+  };
 
-          <li
-            className={`text-secondary text-[18px] font-medium cursor-pointer hover:text-white`}
-          >
-            <a
-              href={publicUrls.resume}
-              download="Brochure.pdf"
-              target="_blank"
-            >
-              Download Brochure
-            </a>
-          </li>
-        </ul>
+  const handleMobileRegistrationClick = () => {
+    setIsMobileRegistrationDropdownOpen(!isMobileRegistrationDropdownOpen);
+  };
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
 
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } absolute top-20 right-0 black-gradient mx-4 my-2 p-6 rounded-xl z-10 min-w-[140px]`}
-          >
-            <ul className="list-none flex flex-col gap-4 justify-end items-start">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-white" : "text-secondary"
-                  } text-[18px] font-medium cursor-pointer hover:text-white`}
-                  onClick={() => {
-                    setActive(link.title);
-                    setToggle(!toggle);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
+  return (
+    <nav
+      className={`${styles.paddingX} py-5 w-full flex items-center fixed top-0 z-20 bg-primary`}
+    >
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        <Link
+          to={navigationPaths.home}
+          className="flex items-center gap-2"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+            setIsRegistrationDropdownOpen(false); // Close dropdown on logo click
+            setIsMobileRegistrationDropdownOpen(false); // Close mobile dropdown on logo click
 
-              <li
-                className={`text-secondary text-[18px] font-medium cursor-pointer hover:text-white`}
-              >
-                <a
-                  href={publicUrls.resume}
-                  download="Brochure.pdf"
-                  target="_blank"
-                >
-                  Download Brochure
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
+          }}
+        >
+          <img src={logoWeb} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            {personalInfo.name} &nbsp;
+          </p>
+        </Link>
+
+        <ul className="list-none hidden sm:flex flex-row gap-10">
+          {navLinks.map((link) => (
+            link.title === "Registration" ? (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } text-[18px] font-medium cursor-pointer hover:text-white relative`}
+                onClick={() => {
+                  setActive(link.title);
+                  handleRegistrationClick();
+                }}
+              >
+                <button className="flex items-center">
+                  {link.title}
+                </button>
+                {isRegistrationDropdownOpen && (
+                  <ul
+                    className="dropdown absolute top-full left-0 mt-2 p-2 bg-primary rounded-md shadow-md w-max"
+                  >
+                    {registrationLinks.map((regLink) => (
+                      <li
+                        key={regLink.id}
+                        className="text-secondary text-[16px] font-medium cursor-pointer hover:text-white py-1"
+                      >
+                        <a
+                          href={regLink.googleFormUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setIsRegistrationDropdownOpen(false)} // Close dropdown after clicking a link
+
+                        >
+                          {regLink.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ) : (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } text-[18px] font-medium cursor-pointer hover:text-white`}
+                onClick={() => {
+                  setActive(link.title);
+                  setIsRegistrationDropdownOpen(false); // Close dropdown when other links are clicked
+                }}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            )
+          ))}
+
+          <li
+            className={`text-secondary text-[18px] font-medium cursor-pointer hover:text-white`}
+          >
+            <a
+              href={publicUrls.resume}
+              download="Brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Brochure
+            </a>
+          </li>
+        </ul>
+
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <img
+            src={toggle ? close : menu}
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            onClick={() => {
+              setToggle(!toggle);
+              setIsMobileRegistrationDropdownOpen(false); // Close mobile dropdown when toggling menu
+            }}
+          />
+
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } absolute top-20 right-0 black-gradient mx-4 my-2 p-6 rounded-xl z-10 min-w-[140px]`}
+          >
+            <ul className="list-none flex flex-col gap-4 justify-end items-start">
+              {navLinks.map((link) => (
+                link.title === "Registration" ? (
+                  <li
+                    key={link.id}
+                    className={`${
+                      active === link.title ? "text-white" : "text-secondary"
+                    } text-[18px] font-medium cursor-pointer hover:text-white relative`}
+                    onClick={() => {
+                      setActive(link.title);
+                      handleMobileRegistrationClick();
+                    }}
+                  >
+                    <button className="flex items-center">
+                      {link.title}
+                    </button>
+                    {isMobileRegistrationDropdownOpen && (
+                      <ul
+                        className="dropdown absolute top-full left-0 mt-2 p-2 bg-primary rounded-md shadow-md w-max"
+                      >
+                        {registrationLinks.map((regLink) => (
+                          <li
+                            key={regLink.id}
+                            className="text-secondary text-[16px] font-medium cursor-pointer hover:text-white py-1"
+                          >
+                            <a
+                              href={regLink.googleFormUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => setIsMobileRegistrationDropdownOpen(false)} // Close mobile dropdown after clicking a link
+                            >
+                              {regLink.title}
+                            </a>
+                          </li>
+                        ))}
+                    </ul>
+                  )}
+                </li>
+              ) : (
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-white" : "text-secondary"
+                  } text-[18px] font-medium cursor-pointer hover:text-white`}
+                  onClick={() => {
+                    setActive(link.title);
+                    setIsMobileRegistrationDropdownOpen(false); // Close mobile dropdown when other links are clicked
+                  }}
+                >
+                  <a href={`#${link.id}`}>{link.title}</a>
+                </li>
+              )
+            ))}
+
+              <li
+                className={`text-secondary text-[18px] font-medium cursor-pointer hover:text-white`}
+              >
+                <a
+                  href={publicUrls.resume}
+                  download="Brochure.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download Brochure
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
