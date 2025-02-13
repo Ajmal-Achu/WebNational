@@ -42,23 +42,27 @@ const navigationPaths = {
 
 
 export const navLinks = [
-  {
-    id: navigationPaths.about,
-    title: "Call For Papers",
-  },
-  {
-    id: navigationPaths.conferencetracks,
-    title: " Conference Tracks",
-  },
-  {
-    id: navigationPaths.venue,
-    title: " Venue",
-  },
-  {
-    id: navigationPaths.contact,
-    title: "Contact",
-  },
-];
+    {
+      id: navigationPaths.about,
+      title: "Call For Papers",
+    },
+    {
+      id: navigationPaths.conferencetracks,
+      title: " Conference Tracks",
+    },
+    {
+      id: navigationPaths.venue,
+      title: " Venue",
+    },
+    {
+      id: navigationPaths.contact,
+      title: "Contact",
+    },
+    {
+      id: "registration",
+      title: "Registration",
+    },
+  ];
 
 const services = [
   {
