@@ -64,8 +64,6 @@ export const Hero = () => {
                 Kerala - 689583</p>
                 <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
               </div>}
-              {({ isVisible }) =>
-            </TrackVisibility>
           </Col>
         </Row>
       </Container>
