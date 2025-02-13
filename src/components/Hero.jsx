@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import TrackVisibility from 'react-on-screen';
 
 export const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -51,7 +50,6 @@ export const Hero = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">NCICPS 25</span>
