@@ -12,23 +12,23 @@ import {
 const registrationLinks = [
   {
     id: "paper-presentation-registration",
-    title: "Paper Presentation Registration",
+    title: "Paper Presentation",
     googleFormUrl: "https://forms.gle/RBfPBWcpbdUeBiyg7", // Replace with your actual Google Form URL
   },
   {
     id: "conclave-registration",
-    title: "Conclave Registration",
-    googleFormUrl: "YOUR_CONCLAVE_GOOGLE_FORM_URL", // Replace with your actual Google Form URL
+    title: "Conclave",
+    googleFormUrl: "https://forms.gle/x5uGtwXZpJhMSSeeA", // Replace with your actual Google Form URL
   },
   {
     id: "workshop-registration",
-    title: "Workshop Registration",
+    title: "Workshop",
     googleFormUrl: "https://forms.gle/1UhpazS9LRuJPcPr7", // Replace with your actual Google Form URL
   },
   {
     id: "poster-presentation-registration",
-    title: "Poster Presentation Registration",
-    googleFormUrl: "YOUR_POSTER_PRESENTATION_GOOGLE_FORM_URL", // Replace with your actual Google Form URL
+    title: "Poster Presentation",
+    googleFormUrl: "https://forms.gle/oQWTBWB28RL92csR6", // Replace with your actual Google Form URL
   },
 ];
 
@@ -59,8 +59,8 @@ const Navbar = () => {
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
-            setIsRegistrationDropdownOpen(false); // Close dropdown on logo click
-            setIsMobileRegistrationDropdownOpen(false); // Close mobile dropdown on logo click
+            setIsRegistrationDropdownOpen(false);
+            setIsMobileRegistrationDropdownOpen(false);
 
           }}
         >
@@ -99,7 +99,7 @@ const Navbar = () => {
                           href={regLink.googleFormUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          onClick={() => setIsRegistrationDropdownOpen(false)} // Close dropdown after clicking a link
+                          onClick={() => setIsRegistrationDropdownOpen(false)}
 
                         >
                           {regLink.title}
