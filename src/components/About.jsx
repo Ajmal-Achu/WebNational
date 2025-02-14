@@ -38,10 +38,9 @@ const About = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
+            <motion.div variants={textVariant()} className="mt-10">
         <h2 className="text-4xl font-bold text-white mb-8">
-          About Us
+          About the Conference
         </h2>
       </motion.div>
 
@@ -52,7 +51,7 @@ const About = () => {
         {personalInfo.projectsIntro}
       </motion.p>
 
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="mt-10">
         <h2 className="text-4xl font-bold text-white mb-8">
           Call For Papers
         </h2>
@@ -76,9 +75,9 @@ const About = () => {
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] list-disc list-inside"
       >
         <li>Paper Submission Deadline: 21/01/2025</li>
-        <li>Notification of acceptance: 10/02/2025</li>
-        <li>Camera-Ready paper submission: 15/02/2025</li>
-        <li>Registration for conference: 15/02/2025</li>
+        <li>Notification of acceptance: 14/02/2025</li>
+        <li>Camera-Ready paper submission: 18/02/2025</li>
+        <li>Registration for conference: 18/02/2025</li>
         <li>Registration closes on: 20/02/2025</li>
       </motion.ul>
 
