@@ -60,7 +60,6 @@ export default function Hero() {
             </div>
                         {/* About Us Section */}
                         <div className="space-y-2">
-              <h2 className="text-2xl font-bold mb-2">About Us</h2>
               <p className="text-gray-300">
                 The 2nd National Conference on Intelligent Cyber Physical Systems (NCICPS'25) is a premier gathering of
                 researchers, practitioners, and innovators in the field of cyber-physical systems and their intelligent
