@@ -58,7 +58,18 @@ export default function Hero() {
                 <span className="text-[#00B3B3]">27th February - 1st March 2025</span>
               </h1>
             </div>
-
+                        {/* About Us Section */}
+                        <div className="space-y-2">
+              <h2 className="text-2xl font-bold mb-2">About Us</h2>
+              <p className="text-gray-300">
+                The 2nd National Conference on Intelligent Cyber Physical Systems (NCICPS'25) is a premier gathering of
+                researchers, practitioners, and innovators in the field of cyber-physical systems and their intelligent
+                applications.
+              </p>
+              <p className="text-gray-300">
+                Join us in shaping the future of intelligent systems and their impact on our interconnected world.
+              </p>
+            </div>
             <div className="space-y-2">
               <p className="text-xl font-bold text-[#00B3B3]">Organized By</p>
               <p className="text-2xl font-bold">College of Engineering Kallooppara</p>
@@ -71,7 +82,7 @@ export default function Hero() {
             </div>
 
             {/* Paper Presentation Section */}
-            <div className="space-y-2">
+            <div className="space-y-2 py-5">
               <div className="flex justify-between items-center">
                 <p className="text-xl font-bold text-[#00B3B3]">Paper Presentation</p>
                 <div className="flex space-x-2">
@@ -92,15 +103,14 @@ export default function Hero() {
               {showPaperDetails && (
                 <div className="mt-2 pl-4">
                   <p className="text-gray-300">
-                    Details about paper presentation will be shown here. You can add more information like submission
-                    guidelines, important dates, etc.
+                    Paper presentation will be conveyed to the author of accepted paper through registered e-mail id.
                   </p>
                 </div>
               )}
             </div>
 
             {/* Conclave Section */}
-            <div className="space-y-2">
+            <div className="space-y-2 py-5">
               <div className="flex justify-between items-center">
                 <p className="text-xl font-bold text-[#00B3B3]">Conclave</p>
                 <div className="flex space-x-2">
@@ -129,7 +139,7 @@ export default function Hero() {
             </div>
 
             {/* Workshop Section */}
-            <div className="space-y-2">
+            <div className="space-y-2 py-5">
               <div className="flex justify-between items-center">
                 <p className="text-xl font-bold text-[#00B3B3]">Workshop</p>
                 <div className="flex space-x-2">
@@ -149,19 +159,51 @@ export default function Hero() {
               </div>
               {showWorkshopDetails && (
                 <div className="mt-2 pl-4">
-                  <p className="text-gray-300">
+                  <p className="text-white font-bold">
+                    Date: 28/02/25
+                  </p>
+                  <p className="text-white-10 font-bold py-4">
                   Track I - From Concept to Reality: Developing Intelligent Cyber-Physical System for Smart cities and Beyond
                   </p>
+                  <div>
                   <p className="text-gray-300">
                   Session 1: 1. Introduction to IoT and Cyber-Physical Systems (CPS) 2. Single Board Computers and System on Module for CPS. 3. I2C and SPI Protocols for Sensor Interfacing. 
                   Session 2 (Hands on):  1. DS18B20 & DHT22 Sensor interfacing and real-time deployment to open source cloud platform.
+                  </p>
+                  </div>
+                  <p className="text-white-10 font-bold py-4">
+                  Track II - Building LLM Powered applications
+                  </p>
+                  <p className="text-gray-300">
+                  Introduction to Large Language Models (LLMs) <br/>
+                  Choosing the Right LLM for Your Application<br/>
+                  Prompt Engineering<br/>
+                  Embedding LLMs within Applications<br/>
+                  Building Conversational Applications<br/>
+                  Search and Recommendation Engines with LLMs<br/>
+                  Using LLMs with Structured Data<br/>
+                  Fine-Tuning LLMs
+                  </p>
+                  <p className="text-white-10 font-bold py-4">
+                  Track III - Cyber Security and Digital Forensics
+                  </p>
+                  <p className="text-gray-300">
+                  Introduction to Cybersecurity & Career Opportunities
+                  IoT Testing: Understanding IoT Security Threats
+                  FM Radio Hijacking: How it Works & Demonstration
+                  Bad USB Keylogger with Keystroke Injection
+                  SQL Injection: Attacking Live Sites & DumpingDatabases
+                  Case Studies & Real-World Cyber Attacks 
+                  Introduction to Forensics Tools & Hardware Demonstration
+                  Software Tools for Digital Forensics (Disk Imaging, Memory Analysis, etc.)
+
                   </p>
                 </div>
               )}
             </div>
 
             {/* Poster Presentation Section */}
-            <div className="space-y-2">
+            <div className="space-y-2 py-5">
               <div className="flex justify-between items-center">
                 <p className="text-xl font-bold text-[#00B3B3]">Poster Presentation</p>
                 <div className="flex space-x-2">
