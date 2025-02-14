@@ -224,8 +224,7 @@ export default function Hero() {
               {showPosterDetails && (
                 <div className="mt-2 pl-4">
                   <p className="text-gray-300">
-                    Details about poster presentation will be shown here. You can add information about submission
-                    guidelines, format, etc.
+                    Details about poster presentation will be shown here.
                   </p>
                 </div>
               )}
