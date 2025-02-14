@@ -103,7 +103,7 @@ export default function Hero() {
               {showPaperDetails && (
                 <div className="mt-2 pl-4">
                   <p className="text-gray-300">
-                    Paper presentation will be conveyed to the author of accepted paper through registered e-mail id.
+                    Details of paper presentation will be conveyed to the authors of accepted papers through their registered e-mail id.
                   </p>
                 </div>
               )}
@@ -167,8 +167,8 @@ export default function Hero() {
                   </p>
                   <div>
                   <p className="text-gray-300">
-                  Session 1: 1. Introduction to IoT and Cyber-Physical Systems (CPS) 2. Single Board Computers and System on Module for CPS. 3. I2C and SPI Protocols for Sensor Interfacing. 
-                  Session 2 (Hands on):  1. DS18B20 & DHT22 Sensor interfacing and real-time deployment to open source cloud platform.
+                  Introduction to IoT and Cyber-Physical Systems (CPS) 2. Single Board Computers and System on Module for CPS. 3. I2C and SPI Protocols for Sensor Interfacing. 
+                  Hands on sessions on DS18B20 & DHT22 Sensor interfacing and real-time deployment to open source cloud platform.
                   </p>
                   </div>
                   <p className="text-white-10 font-bold py-4">
@@ -188,13 +188,13 @@ export default function Hero() {
                   Track III - Cyber Security and Digital Forensics
                   </p>
                   <p className="text-gray-300">
-                  Introduction to Cybersecurity & Career Opportunities
-                  IoT Testing: Understanding IoT Security Threats
+                  Introduction to Cybersecurity & Career Opportunities<br/>
+                  IoT Testing: Understanding IoT Security Threats<br/>
                   FM Radio Hijacking: How it Works & Demonstration
-                  Bad USB Keylogger with Keystroke Injection
-                  SQL Injection: Attacking Live Sites & DumpingDatabases
-                  Case Studies & Real-World Cyber Attacks 
-                  Introduction to Forensics Tools & Hardware Demonstration
+                  Bad USB Keylogger with Keystroke Injection<br/>
+                  SQL Injection: Attacking Live Sites & DumpingDatabases<br/>
+                  Case Studies & Real-World Cyber Attacks <br/>
+                  Introduction to Forensics Tools & Hardware Demonstration<br/>
                   Software Tools for Digital Forensics (Disk Imaging, Memory Analysis, etc.)
 
                   </p>
