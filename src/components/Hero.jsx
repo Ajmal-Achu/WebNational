@@ -131,8 +131,7 @@ export default function Hero() {
               {showConclaveDetails && (
                 <div className="mt-2 pl-4">
                   <p className="text-gray-300">
-                    Details about the conclave will be shown here. You can add more information about the event,
-                    speakers, etc.
+                    Details about the conclave will be shown here.
                   </p>
                 </div>
               )}
@@ -167,7 +166,9 @@ export default function Hero() {
                   </p>
                   <div>
                   <p className="text-gray-300">
-                  Introduction to IoT and Cyber-Physical Systems (CPS) 2. Single Board Computers and System on Module for CPS. 3. I2C and SPI Protocols for Sensor Interfacing. 
+                  Introduction to IoT and Cyber-Physical Systems (CPS) <br/>
+                  Single Board Computers and System on Module for CPS.<br/>
+                  I2C and SPI Protocols for Sensor Interfacing. <br/>
                   Hands on sessions on DS18B20 & DHT22 Sensor interfacing and real-time deployment to open source cloud platform.
                   </p>
                   </div>
